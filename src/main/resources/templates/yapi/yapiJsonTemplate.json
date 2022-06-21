@@ -1,0 +1,258 @@
+{
+  "content": [
+    {
+      "index": 0,
+      "name": "课程管理",
+      "desc": null,
+      "add_time": 1594284586,
+      "up_time": 1594284586,
+      "list": [
+        {
+          "query_path": {
+            "path": "/api/jmSection/create",
+            "params": []
+          },
+          "edit_uid": 0,
+          "status": "undone",
+          "type": "static",
+          "req_body_is_json_schema": false,
+          "res_body_is_json_schema": false,
+          "api_opened": false,
+          "index": 0,
+          "tag": [],
+          "_id": 87,
+          "method": "POST",
+          "catid": 33,
+          "title": "创建课程",
+          "path": "/api/jmSection/create",
+          "project_id": 15,
+          "req_params": [],
+          "res_body_type": "json",
+          "req_query": [],
+          "req_headers": [
+            {
+              "required": "1",
+              "_id": "5f06dfeba5fb4500cdb40086",
+              "name": "Content-Type",
+              "value": "application/json",
+              "example": "",
+              "desc": ""
+            },
+            {
+              "required": "1",
+              "_id": "5f06dfeba5fb4500cdb40085",
+              "name": "x-token",
+              "value": "AT-102-uUCkO2NgITHWJSD16g89C9loMwCVSQqh"
+            }
+          ],
+          "req_body_form": [],
+          "desc": "",
+          "markdown": "",
+          "req_body_other": "{\n    \"courseName\": \"这是课程名\",\n    \"courseIntro\": \"课程简介\",\n    \"coverH5ImageUrl\": \"https://dummyimage.com/400x200.png\",\n    \"coverPcImageUrl\": \"https://dummyimage.com/800x400.png\",\n    \"boolEnableCertEnum\": 1, //<comment>1 关联证书，2不关联证书</comment>\n    \"certificateId\": \"111111\",\n    \"chapterIdList\": [\n        \"1111111\",\n        \"1111112\"\n    ],\n    \"stateEnum\": 1\n}\n",
+          "req_body_type": "json",
+          "res_body": "{\n   \"code\": 200,\n   \"isSuccess\": true,\n   \"msg\": \"操作成功\",\n   \"timestamp\": 1583415963985\n}",
+          "uid": 19,
+          "add_time": 1594285614,
+          "up_time": 1594286059,
+          "__v": 0
+        },
+        {
+          "query_path": {
+            "path": "/api/jmSection/batchDelete",
+            "params": []
+          },
+          "edit_uid": 0,
+          "status": "undone",
+          "type": "static",
+          "req_body_is_json_schema": false,
+          "res_body_is_json_schema": false,
+          "api_opened": false,
+          "index": 0,
+          "tag": [],
+          "_id": 90,
+          "method": "POST",
+          "catid": 33,
+          "title": "删除课程",
+          "path": "/api/jmSection/batchDelete",
+          "project_id": 15,
+          "req_params": [],
+          "res_body_type": "json",
+          "req_query": [],
+          "req_headers": [
+            {
+              "required": "1",
+              "_id": "5f06e0c6a5fb4500cdb40094",
+              "name": "Content-Type",
+              "value": "application/json",
+              "example": "",
+              "desc": ""
+            },
+            {
+              "required": "1",
+              "_id": "5f06e0c6a5fb4500cdb40093",
+              "name": "x-token",
+              "value": "AT-102-uUCkO2NgITHWJSD16g89C9loMwCVSQqh"
+            }
+          ],
+          "req_body_form": [],
+          "desc": "",
+          "markdown": "",
+          "req_body_other": "{\n   \"idList\": [\n      \"1111111\",\n      \"1111112\"\n   ]\n}",
+          "req_body_type": "json",
+          "res_body": "{\n   \"code\": 200,\n   \"isSuccess\": true,\n   \"msg\": \"操作成功\",\n   \"timestamp\": 1583415963985\n}",
+          "uid": 19,
+          "add_time": 1594286199,
+          "up_time": 1594286278,
+          "__v": 0
+        },
+        {
+          "query_path": {
+            "path": "/api/jmSection/update",
+            "params": []
+          },
+          "edit_uid": 0,
+          "status": "undone",
+          "type": "static",
+          "req_body_is_json_schema": false,
+          "res_body_is_json_schema": false,
+          "api_opened": false,
+          "index": 0,
+          "tag": [],
+          "_id": 88,
+          "method": "POST",
+          "catid": 33,
+          "title": "更新课程",
+          "path": "/api/jmSection/update",
+          "project_id": 15,
+          "req_params": [],
+          "res_body_type": "json",
+          "req_query": [],
+          "req_headers": [
+            {
+              "required": "1",
+              "_id": "5f06e030a5fb4500cdb4008a",
+              "name": "Content-Type",
+              "value": "application/json",
+              "example": "",
+              "desc": ""
+            },
+            {
+              "required": "1",
+              "_id": "5f06e030a5fb4500cdb40089",
+              "name": "x-token",
+              "value": "AT-102-uUCkO2NgITHWJSD16g89C9loMwCVSQqh"
+            }
+          ],
+          "req_body_form": [],
+          "desc": "",
+          "markdown": "",
+          "req_body_other": "{\n    \"id\": \"1111\",\n    \"courseName\": \"这是课程名\",\n    \"courseIntro\": \"课程简介\",\n    \"coverH5ImageUrl\": \"https://dummyimage.com/400x200.png\",\n    \"coverPcImageUrl\": \"https://dummyimage.com/800x400.png\",\n    \"boolEnableCertEnum\": 1, //<comment>1 关联证书，2不关联证书</comment>\n    \"certificateId\": \"111111\",\n    \"chapterIdList\": [\n        \"1111111\",\n        \"1111112\"\n    ],\n    \"stateEnum\": 1\n}\n",
+          "req_body_type": "json",
+          "res_body": "{\n   \"code\": 200,\n   \"isSuccess\": true,\n   \"msg\": \"操作成功\",\n   \"timestamp\": 1583415963985\n}",
+          "uid": 19,
+          "add_time": 1594286063,
+          "up_time": 1594286128,
+          "__v": 0
+        },
+        {
+          "query_path": {
+            "path": "/api/jmSection/page",
+            "params": []
+          },
+          "edit_uid": 0,
+          "status": "undone",
+          "type": "static",
+          "req_body_is_json_schema": false,
+          "res_body_is_json_schema": false,
+          "api_opened": false,
+          "index": 0,
+          "tag": [],
+          "_id": 85,
+          "method": "POST",
+          "catid": 33,
+          "title": "课程分页",
+          "path": "/api/jmSection/page",
+          "project_id": 15,
+          "req_params": [],
+          "res_body_type": "json",
+          "uid": 19,
+          "add_time": 1594284617,
+          "up_time": 1594285970,
+          "req_query": [],
+          "req_headers": [
+            {
+              "required": "1",
+              "_id": "5f06df92a5fb4500cdb40084",
+              "name": "Content-Type",
+              "value": "application/json",
+              "example": "",
+              "desc": ""
+            },
+            {
+              "required": "1",
+              "_id": "5f06df92a5fb4500cdb40083",
+              "name": "x-token",
+              "value": "AT-102-uUCkO2NgITHWJSD16g89C9loMwCVSQqh"
+            }
+          ],
+          "req_body_form": [],
+          "__v": 0,
+          "desc": "",
+          "markdown": "",
+          "req_body_other": "{\n   \"pageNum\": 1,\n   \"pageSize\": 10\n}",
+          "req_body_type": "json",
+          "res_body": "\n{\n    \"code\": 200,\n    \"isSuccess\": true,\n    \"msg\": \"操作成功\",\n    \"timestamp\": 1583415963985,\n    \"data\": {\n        \"total\": 2,\n        \"list\": [\n            {\n                \"id\": \"1583415963985\",\n                \"coverH5ImageUrl\": \"https://dummyimage.com/400x200.png\",\n                \"coverPcImageUrl\": \"https://dummyimage.com/800x400.png\",\n                \"courseName\": \"这是课程名\",\n                \"boolEnableCertEnum\": 1,//<comment>1 关联证书，2不关联证书</comment>\n                \"boolEnableCertEnumString\": \"关联证书\",//<comment>1 关联证书，2不关联证书</comment>,\n                \"certificateId\": \"1583415963985\",\n                \"studyUserNumber\": 133,\n                \"stateEnum\": 1,\n                \"stateEnumString\": \"已上架\",\n                \"createDate\": \"1583415963985\"\n            },\n            {\n                \"id\": \"1583415963985\",\n                \"coverH5ImageUrl\": \"https://dummyimage.com/400x200.png\",\n                \"coverPcImageUrl\": \"https://dummyimage.com/800x400.png\",\n                \"courseName\": \"这是课程名\",\n                \"boolEnableCertEnum\": 1,//<comment>1 关联证书，2不关联证书</comment>\n                \"boolEnableCertEnumString\": \"关联证书\",//<comment>1 关联证书，2不关联证书</comment>,\n                \"certificateId\": \"1583415963985\",\n                \"studyUserNumber\": 133,\n                \"stateEnum\": 1,\n                \"stateEnumString\": \"已上架\",\n                \"createDate\": \"1583415963985\"\n            }\n        ],\n        \"pageNum\": 1,\n        \"pageSize\": 10,\n        \"size\": 1,\n        \"startRow\": 0,\n        \"endRow\": 0,\n        \"pages\": 0,\n        \"prePage\": 0,\n        \"nextPage\": 0,\n        \"isFirstPage\": true,\n        \"isLastPage\": true,\n        \"hasPreviousPage\": false,\n        \"hasNextPage\": false,\n        \"navigatePages\": 8,\n        \"navigatepageNums\": [],\n        \"navigateFirstPage\": 0,\n        \"navigateLastPage\": 0\n    }\n}\n"
+        },
+        {
+          "query_path": {
+            "path": "/api/jmSection/detail",
+            "params": []
+          },
+          "edit_uid": 0,
+          "status": "undone",
+          "type": "static",
+          "req_body_is_json_schema": false,
+          "res_body_is_json_schema": false,
+          "api_opened": false,
+          "index": 0,
+          "tag": [],
+          "_id": 89,
+          "method": "POST",
+          "catid": 33,
+          "title": "课程详情",
+          "path": "/api/jmSection/detail",
+          "project_id": 15,
+          "req_params": [],
+          "res_body_type": "json",
+          "req_query": [],
+          "req_headers": [
+            {
+              "required": "1",
+              "_id": "5f06e06aa5fb4500cdb4008e",
+              "name": "Content-Type",
+              "value": "application/json",
+              "example": "",
+              "desc": ""
+            },
+            {
+              "required": "1",
+              "_id": "5f06e06aa5fb4500cdb4008d",
+              "name": "x-token",
+              "value": "AT-102-uUCkO2NgITHWJSD16g89C9loMwCVSQqh"
+            }
+          ],
+          "req_body_form": [],
+          "desc": "",
+          "markdown": "",
+          "req_body_other": "{\n   \"id\": \"1111\"\n}",
+          "req_body_type": "json",
+          "res_body": "{\n    \"code\": 200,\n    \"isSuccess\": true,\n    \"msg\": \"操作成功\",\n    \"timestamp\": 1583415963985,\n    \"data\": {\n        \"id\": \"1111\",\n        \"courseName\": \"这是课程名\",\n        \"courseIntro\": \"课程简介\",\n        \"coverH5ImageUrl\": \"https://dummyimage.com/400x200.png\",\n        \"coverPcImageUrl\": \"https://dummyimage.com/800x400.png\",\n        \"boolEnableCertEnum\": 1, //<comment>1 关联证书，2不关联证书</comment>\n        \"certificateId\": \"111111\",\n        \"chapterIdList\": [\n            \"1111111\",\n            \"1111112\"\n        ],\n        \"stateEnum\": 1\n    }\n}",
+          "uid": 19,
+          "add_time": 1594286131,
+          "up_time": 1594286186,
+          "__v": 0
+        }
+      ]
+    }
+  ]
+}

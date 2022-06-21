@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC"/>
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+				<property name="url"
+						  value="jdbc:mysql://127.0.0.1:3306/upupmo_db?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;autoReconnect=true&amp;allowMultiQueries=true&amp;rewriteBatchedStatements=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=Asia/Shanghai&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;character_set_client=utf8mb4&amp;character_set_connection=utf8mb4&amp;character_set_database=utf8mb4&amp;character_set_results=utf8mb4&amp;character_set_server=utf8mb4&amp;character_set_system=utf8&amp;character_set_filesystem=binary&amp;collation_connection=utf8mb4_unicode_520_ci&amp;collation_database=utf8mb4_unicode_520_ci&amp;collation_server=utf8mb4_unicode_520_ci"/>
+				<property name="username" value="root"/>
+				<property name="password" value="123456"/>
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="mapper/SysGeneratorMapper.xml"/>
+	</mappers>
+</configuration>

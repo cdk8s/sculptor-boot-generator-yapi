@@ -1,0 +1,83 @@
+package ${javaRootPackage}.multiapi.controller;
+
+import ${javaRootPackage}.constant.GlobalConstant;
+import ${javaRootPackage}.core.enums.RequestSourceCodeEnum;
+import ${javaRootPackage}.enums.DeleteEnum;
+import ${javaRootPackage}.sys.context.UserInfoContext;
+import ${javaRootPackage}.sys.service.SysVersionUpdateService;
+import ${javaRootPackage}.util.BeanUtil;
+import ${javaRootPackage}.util.DatetimeUtil;
+import ${javaRootPackage}.util.StringUtil;
+import ${javaRootPackage}.util.response.biz.R;
+#foreach ($column in $apiControllerBOList)
+#if($column.requestParamClassName)
+import com.cdk8s.sculptor.multiapi.pojo.param.${column.requestParamClassName};
+#end
+#if($column.responseDTOClassName)
+import com.cdk8s.sculptor.multiapi.pojo.response.${column.responseDTOClassName};
+#end
+#end
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import javax.validation.Valid;
+import java.util.List;
+
+@Slf4j
+@RestController
+@RequestMapping("/multiapi")
+public class ${controllerClassName} {
+
+	@Autowired
+	private ${ClassName}Service ${className}Service;
+
+
+	// =====================================查询业务 start=====================================
+
+
+#foreach ($column in $apiControllerBOList)
+#if($column.requestParamClassName)
+	/**
+	 * ${column.apiComment}
+	 */
+	@RequestMapping(value = "${column.apiPath}", method = RequestMethod.POST)
+	public ResponseEntity<?> ${column.apiMethodName}(@Valid @RequestBody ${column.requestParamClassName} param) {
+#if($column.responseDTOClassName)
+		${column.responseDTOClassName} dto = new ${column.responseDTOClassName}();
+
+		return R.success(dto);
+#else
+		return R.success();
+#end
+	}
+#else
+	/**
+	 * ${column.apiComment}
+	 */
+	@RequestMapping(value = "${column.apiPath}", method = RequestMethod.POST)
+	public ResponseEntity<?> ${column.apiMethodName}() {
+#if($column.responseDTOClassName)
+		${column.responseDTOClassName} dto = new ${column.responseDTOClassName}();
+
+		return R.success(dto);
+#else
+		return R.success();
+#end
+	}
+#end
+#end
+
+	// =====================================查询业务 end=====================================
+	// =====================================操作业务 start=====================================
+
+
+	// =====================================操作业务 end=====================================
+	// =====================================私有方法 start=====================================
+
+	// =====================================私有方法 end=====================================
+}
